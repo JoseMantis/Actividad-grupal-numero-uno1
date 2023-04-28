@@ -18,7 +18,6 @@
 
 	<label for="apellido-materno">Apellido Materno:</label>
 	<input type="text" id="apellido-materno" name="apellido-materno" required><br><br>
--+
 	<label for="fecha-nacimiento">Fecha de Nacimiento:</label>
 	<input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required><br><br>
 
@@ -45,7 +44,11 @@
 	<label for="motivacion">Motivación para postular al trabajo:</label>
 	<textarea id="motivacion" name="motivacion" rows="5" required></textarea><br><br>
 
-	<input type="submit" value="Enviar">
+
+	<input type="button" value="Enviar" onclick="validar()">
+    <input type="button" value="Escribir carta" onclick="escribirCarta()">
+    <br><br>
+    <textarea id="carta"></textarea>
 </form>
 <script src="funciones.js"></script>
 </body>
