@@ -1,25 +1,25 @@
 function validar(){
     var formularioOk = true
-
-    document.getElementById("rut").value
+    
+    var rut = $("#rut").val()
     var Lrut = rut.lenght
     if (Lrut < 9 && Lrut > 10){
         formularioOk = false
         alert("El rut no está bien")
     }
 
-    var appaterno = document.getElementById("appaterbi").value
+    var appaterno = $("#appaterbi").val()
     var largoAppaterno = appaterno.lenght 
     if(largoAppaterno < 3 || largoAppaterno > 20){
         formularioOk = false
         alert("El apellido no ")
     }
     
-    var edad = document.getElementById("edad").value
+    var edad = $("#edad").val()
     var valorEdad = parseInt(edad)
     if (valorEdad < 18||valorEdad >36){
         formularioOk = false
-        alert("Edad fuera de rango escrielo bien wn")
+        alert("Edad fuera de rango escrielo bien por favor muchas gracias.")
     }
 
     if(formularioOk){
@@ -28,10 +28,19 @@ function validar(){
 }
 
 function escribirCarta(){
-    var rut = document.getElementById("rut").value
-    var rut = document.getElementById("nombre").value
+    var rut = $("#rut").val()
+    var nombre = $("#nombre").val()
     var carta =  `Rut: ${rut} - Nombre ${nombre}`
-    document.getElementById("carta").value = carta
+    $("#carta").val(carta)
+    $("#carta").show()
+    $("#formulario").hide()
+    $("btnValida").show()
+}
+
+function mostrar(){
+    $("#formulario").show()
+    $("#carta").hide()
+    $("#btnValida").hide()
 }
 
 /*

@@ -6,7 +6,7 @@
 <body>
 <h1>Porfavor rellene el siguiente Formulario para la postulación para el trabajo de apoyo ambiental para Chiloé.</h1>
 
-<form>
+<form id="formulario">
 	<label for="nombre">Nombre:</label>
 	<input type="text" id="nombre" name="nombre" minlength="3" maxlength="20" required><br><br>
 
@@ -42,14 +42,20 @@
 	<input type="text" id="profesion" name="profesion" required><br><br>
 
 	<label for="motivacion">Motivación para postular al trabajo:</label>
-	<textarea id="motivacion" name="motivacion" rows="5" required></textarea><br><br>
-
-
-	<input type="button" value="Enviar" onclick="validar()">
-    <input type="button" value="Escribir carta" onclick="escribirCarta()">
-    <br><br>
-    <textarea id="carta"></textarea>
+	<textarea id="motivacion" name="motivacion" rows="5" required></textarea>
+    
 </form>
+<br><br>
+<input id="btnValida" type="button" value="Enviar">
+<br><br>
+<textarea id="carta"></textarea>
 <script src="funciones.js"></script>
+
+<script>
+	$("#formulario").ready(function(){
+		$("#btnValida").click(validar)
+		$("#carta").hide()
+	})
+</script>
 </body>
 </html>
