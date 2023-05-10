@@ -1,0 +1,18 @@
+{
+    "Informacion_Personal":{
+        "Nombre" : "Eduardo Montalva" ,
+        "Rut" : "555555-5" ,
+        "Profesion" : "Ingeniero Informático" ,
+        "direccion" : "Santo Daniel 2345" ,
+        "edad" : "25" ,
+        "Fecha_Nacimiento" : "2013-03-14"
+    },
+    //kek
+    "Informacion_Salud": {
+        "Afiliacion":  "Fonasa",
+        "Tipo_Sangre":  ["O", "A", "B", "AB"],
+        "Alergia":  true,
+        "Operado": true,
+        "enfermedades": ["Parkinson", "Taquicardia"] 
+    }
+}

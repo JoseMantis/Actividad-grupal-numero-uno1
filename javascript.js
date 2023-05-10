@@ -6,13 +6,15 @@ function validar(){
     if (Lrut < 9 && Lrut > 10){
         formularioOk = false
         alert("El rut no está bien")
+        $("#msgRut").show()
     }
 
-    var appaterno = $("#appaterbi").val()
+    var appaterno = $("#appaterno").val()
     var largoAppaterno = appaterno.lenght 
     if(largoAppaterno < 3 || largoAppaterno > 20){
         formularioOk = false
         alert("El apellido no ")
+        $("#msgAppaterno").show()
     }
     
     var edad = $("#edad").val()
@@ -23,7 +25,7 @@ function validar(){
     }
 
     if(formularioOk){
-    escribirCarta()
+        escribirCarta()
     }
 }
 
@@ -34,15 +36,31 @@ function escribirCarta(){
     $("#carta").val(carta)
     $("#carta").show()
     $("#formulario").hide()
-    $("btnValida").show()
+    $("btnMostrar").show()
 }
 
 function mostrar(){
     $("#formulario").show()
     $("#carta").hide()
-    $("#btnValida").hide()
+    $("#btnMostrar").hide()
 }
 
+function blurRut(){
+    alert("evento Blur en rut")
+}
+
+function focusAppaterno(){
+    alert("evento Change en appaterno")
+}
+
+
+function changeApmaterno(){
+    $("#msgapellido-materno").show()
+}
+
+function selectNombre(){
+    alert("evento Select en nombre")
+}
 /*
 <!DOCTYPE html>
 <html lang="en">
